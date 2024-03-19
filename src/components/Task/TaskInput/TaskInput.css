@@ -1,0 +1,11 @@
+.tasks__task-input {
+    font-family: 'Product Sans Light Regular';
+    height: 100%;
+    line-height: 31px;
+    position: absolute;
+    left: 63px;
+    top: -1px;
+    height: 30px;
+    font-size: 18px;
+    border: none;
+}

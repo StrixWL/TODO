@@ -21,9 +21,7 @@ const Tasks = () => {
         <div className='tasks'>
             <h1>My Tasks</h1>
             <button onClick={onBtnclick} className='tasks__add-btn'>Add a task</button>
-            {items.map((item, i) => (
-                <Task key={i} item={item} i={i} />
-            ))}
+            {items.map((item, i) => <Task key={i} item={item} i={i} />)}
         </div>
     )
 }

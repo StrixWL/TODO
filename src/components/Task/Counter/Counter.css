@@ -1,0 +1,7 @@
+.tasks__task-counter {
+    font-family: "Product Sans Light Regular";
+    font-size: 20px;
+    position: absolute;
+    right: 70px;
+    top: 2px;
+}
