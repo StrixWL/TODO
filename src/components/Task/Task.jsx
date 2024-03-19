@@ -1,6 +1,6 @@
 import './Task.css'
 import RoundCheckbox from '../ui/RoundCheckbox/RoundCheckbox'
-import Button from '../ui/EditButton/EditButton'
+import Button from '../ui/Button/Button'
 import { useEffect, useState } from 'react'
 import Counter from './Counter/Counter'
 import TaskInput from './TaskInput/TaskInput'

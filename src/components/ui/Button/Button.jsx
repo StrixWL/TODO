@@ -1,4 +1,4 @@
-import styles from './EditButton.module.css'
+import styles from './Button.module.css'
 
 const Button = (props) => {
     const className = styles['edit-button'] + (props.className ? ' ' + props.className : '')
