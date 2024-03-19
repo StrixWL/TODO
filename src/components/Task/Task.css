@@ -1,0 +1,49 @@
+
+.tasks__task {
+    position: relative;
+    width: 100%;
+    height: 30px;
+    text-align: left;
+    margin: 20px 0;
+}
+
+.tasks__task-checkbox {
+    margin: 0 20px;
+    position: absolute !important;
+}
+
+.tasks__task-title {
+    font-family: 'Product Sans Light Regular';
+    height: 100%;
+    line-height: 31px;
+    position: absolute;
+    left: 65px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.tasks__task-input {
+    font-family: 'Product Sans Light Regular';
+    height: 100%;
+    line-height: 31px;
+    position: absolute;
+    left: 63px;
+    top: -1px;
+    height: 30px;
+    font-size: 18px;
+    border: none;
+}
+
+.tasks__task-edit-btn {
+    position: absolute;
+    right: 20px;
+}
+
+
+.tasks__task-counter {
+    font-family: "Product Sans Light Regular";
+    font-size: 20px;
+    position: absolute;
+    right: 70px;
+    top: 2px;
+}
