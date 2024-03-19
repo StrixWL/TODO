@@ -1,19 +1,21 @@
-// import 'Task.css'
+import './Task.css'
+import RoundCheckbox from '../ui/RoundCheckbox/RoundCheckbox'
+import EditButton from '../ui/EditButton/EditButton'
 
-// const Task = () => {
-//     return (
-//         <div key={i} className='tasks__task'>
-//             <RoundCheckbox id={i} checked={item.done} className='tasks__task-checkbox' onChange={() => onInputChange(i)} />
-//             <input ref={item.ref} style={{
-//                 display: item.isBeingEdited ? 'inline': 'none',
-//             }} onBlur={() => onBlur(i)} defaultValue={item.title} className='tasks__task-input' type="text" />
-//             <span style={{
-//                 display: item.isBeingEdited ? 'none': 'inline',
-//                 textDecoration: item.done ? 'line-through' : 'none'
-//             }} className='tasks__task-title'>{item.title}</span>
-//             <EditButton className='tasks__task-edit-btn' onClick={() => onTaskEdit(i)} />
-//         </div>
-//     )
-// }
+const Task = (props) => {
+    return (
+        <div key={props.i} className='tasks__task'>
+            <RoundCheckbox id={props.i} checked={props.item.done} className='tasks__task-checkbox' onChange={() => props.onInputChange(props.i)} />
+            <input ref={props.item.ref} style={{
+                display: props.item.isBeingEdited ? 'inline': 'none',
+            }} onBlur={() => props.onBlur(props.i)} defaultValue={props.item.title} className='tasks__task-input' type="text" />
+            <span style={{
+                display: props.item.isBeingEdited ? 'none': 'inline',
+                textDecoration: props.item.done ? 'line-through' : 'none'
+            }} className='tasks__task-title'>{props.item.title}</span>
+            <EditButton className='tasks__task-edit-btn' onClick={() => props.onTaskEdit(props.i)} />
+        </div>
+    )
+}
 
-// export default Task;
+export default Task;
