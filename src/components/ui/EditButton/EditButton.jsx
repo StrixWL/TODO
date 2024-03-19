@@ -1,13 +1,12 @@
 import styles from './EditButton.module.css'
-import edit from '../../../assets/edit.svg'
 
-const EditButton = (props) => {
+const Button = (props) => {
     const className = styles['edit-button'] + (props.className ? ' ' + props.className : '')
     return (
         <button onClick={props.onClick} className={className}>
-            <img src={edit} alt="Logo" />
+            <img src={props.icon} />
         </button>
     )
 }
 
-export default EditButton;
+export default Button;

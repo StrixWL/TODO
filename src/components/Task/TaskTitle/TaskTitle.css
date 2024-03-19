@@ -1,0 +1,9 @@
+.tasks__task-title {
+    font-family: 'Product Sans Light Regular';
+    height: 100%;
+    line-height: 31px;
+    position: absolute;
+    left: 65px;
+    font-size: 18px;
+    cursor: pointer;
+}

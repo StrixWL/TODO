@@ -12,18 +12,15 @@
     position: absolute !important;
 }
 
-.tasks__task-title {
-    font-family: 'Product Sans Light Regular';
-    height: 100%;
-    line-height: 31px;
-    position: absolute;
-    left: 65px;
-    font-size: 18px;
-    cursor: pointer;
-}
-
 .tasks__task-edit-btn {
     position: absolute;
-    right: 20px;
+    right: 55px;
 }
 
+.tasks__task-delete-btn {
+    position: absolute;
+    right: 23px;
+    width: 30px;
+    top: -2px;
+    padding: 0;
+}

@@ -1,7 +1,9 @@
-const TaskTitle = ({setCount, count, display, textDecoration, title, done}) => {
+import './TaskTitle.css'
+
+const TaskTitle = ({setCount, count, display, textDecoration, title, done, item}) => {
     return (
         <span
-            onClick={() => setCount(count + 1)}
+            onClick={() => (item.count = count + 1, setCount(count + 1))}
             style={{
                 display,
                 textDecoration
