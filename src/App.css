@@ -1,0 +1,18 @@
+body {
+    background-color: #F8F9FA;
+    margin: 0;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    align-content: flex-start;
+    flex-wrap: nowrap;
+    justify-content: center;
+    padding: 12px 4px 0 12px;
+    width: fit-content;
+    min-width: 100%;
+    box-sizing: border-box;
+    height: 100%;
+}

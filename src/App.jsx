@@ -1,8 +1,15 @@
 import './App.css'
+import Navbar from './components/Navbar/Navbar'
+import Tasks from './pages/Tasks/Tasks'
 
 function App() {
   return (
-    <>Salam sahbi</>
+    <>
+      <Navbar />
+      <main>
+        <Tasks />
+      </main>
+    </>
   )
 }
 
