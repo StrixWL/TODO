@@ -25,7 +25,7 @@ const Tasks = () => {
 		const _items = [...items];
 		_items.splice(id, 1);
 		setItems(_items);
-		LocalStorage.updateItems(_items)
+		LocalStorage.updateItems(_items);
 	};
 	return (
 		<div className="tasks">
@@ -33,19 +33,23 @@ const Tasks = () => {
 			<button onClick={onBtnclick} className="tasks__add-btn">
 				Add a task
 			</button>
-			{items.map(
-				(item, i) => (
-					(item.i = i),
-					(
-						<Task
-							key={i}
-							item={item}
-							onTaskRemove={onTaskRemove}
-							updateStorage={() => LocalStorage.updateItems(items)}
-						/>
+			<ul className="tasks__list">
+				{items.map(
+					(item, i) => (
+						(item.i = i),
+						(
+							<Task
+								key={i}
+								item={item}
+								onTaskRemove={onTaskRemove}
+								updateStorage={() =>
+									LocalStorage.updateItems(items)
+								}
+							/>
+						)
 					)
-				)
-			)}
+				)}
+			</ul>
 		</div>
 	);
 };

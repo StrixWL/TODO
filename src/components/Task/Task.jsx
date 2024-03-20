@@ -35,7 +35,7 @@ const Task = (props) => {
 		props.item.focus();
 	}, [isBeingEdited]);
 	return (
-		<div key={props.item.i} className="tasks__task">
+		<li key={props.item.i} className="tasks__task">
 			<RoundCheckbox
 				id={props.item.i}
 				checked={props.item.done}
@@ -69,7 +69,7 @@ const Task = (props) => {
 				className="tasks__task-delete-btn"
 				onClick={() => props.onTaskRemove(props.item.i)}
 			/>
-		</div>
+		</li>
 	);
 };
 
