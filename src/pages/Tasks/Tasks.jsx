@@ -1,10 +1,13 @@
 import "./Tasks.css";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import useFocus from "../../hooks/useFocus";
 import Task from "../../components/Task/Task";
+import LocalStorage from "../../services/LocalStorageService";
 
 const Tasks = () => {
-	const [items, setItems] = useState([]);
+	const initialItems = LocalStorage.getInitialItems();
+	const [items, setItems] = useState(initialItems);
+
 	const onBtnclick = () => {
 		const _items = [...items];
 		const [inputRef, setInputFocus] = useFocus();
@@ -22,6 +25,7 @@ const Tasks = () => {
 		const _items = [...items];
 		_items.splice(id, 1);
 		setItems(_items);
+		LocalStorage.updateItems(_items)
 	};
 	return (
 		<div className="tasks">
@@ -32,7 +36,14 @@ const Tasks = () => {
 			{items.map(
 				(item, i) => (
 					(item.i = i),
-					(<Task key={i} item={item} onTaskRemove={onTaskRemove} />)
+					(
+						<Task
+							key={i}
+							item={item}
+							onTaskRemove={onTaskRemove}
+							updateStorage={() => LocalStorage.updateItems(items)}
+						/>
+					)
 				)
 			)}
 		</div>

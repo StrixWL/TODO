@@ -6,4 +6,11 @@
 	left: 65px;
 	font-size: 18px;
 	cursor: pointer;
+	display: block;
+	width: 50px;
+}
+
+.testing {
+	width: 200px;
+	display: block;
 }

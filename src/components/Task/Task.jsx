@@ -18,15 +18,18 @@ const Task = (props) => {
 		props.item.title = props.item.ref.current.value;
 		setIsBeingEdited(false);
 		if (!props.item.title) props.onTaskRemove(props.item.i);
+		props.updateStorage();
 	};
 	const onTaskEdit = () => {
 		setIsBeingEdited(true);
 		props.item.ref.current.value = props.item.title;
 		props.item.focus();
+		props.updateStorage();
 	};
 	const onInputChange = () => {
 		props.item.done = !props.item.done;
 		setDone(!done);
+		props.updateStorage();
 	};
 	useEffect(() => {
 		props.item.focus();
@@ -53,6 +56,7 @@ const Task = (props) => {
 				textDecoration={props.item.done ? "line-through" : "none"}
 				title={props.item.title}
 				item={props.item}
+				updateStorage={props.updateStorage}
 			/>
 			<Counter count={props.item.count} />
 			<Button

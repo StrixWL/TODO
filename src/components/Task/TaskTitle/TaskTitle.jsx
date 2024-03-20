@@ -6,20 +6,27 @@ const TaskTitle = ({
 	display,
 	textDecoration,
 	title,
-	done,
+	updateStorage,
 	item,
 }) => {
 	return (
-		<span
-			onClick={() => ((item.count = count + 1), setCount(count + 1))}
-			style={{
-				display,
-				textDecoration,
-			}}
-			className="tasks__task-title"
-		>
-			{title}
-		</span>
+		<>
+			<span
+				onClick={() => (
+					(item.count = count + 1),
+					setCount(count + 1),
+					updateStorage()
+				)}
+				style={{
+					display,
+					textDecoration,
+				}}
+				className="tasks__task-title"
+			>
+				{title}
+			</span>
+			{/* <span className="testing">salam sahbi salam sahbi salam sahbi salam sahbi salam sahbi salam sahbi salam sahbi salam sahbi salam sahbi salam sahbi salam sahbi salam sahbi salam sahbi salam sahbi salam sahbi </span> */}
+		</>
 	);
 };
 
