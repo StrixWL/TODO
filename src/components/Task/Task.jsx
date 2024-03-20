@@ -15,6 +15,8 @@ const Task = (props) => {
     const onBlur = () => {
         props.item.title = props.item.ref.current.value
         setIsBeingEdited(false)
+        if (!props.item.title)
+            props.onTaskRemove(props.item.i)
     }
     const onTaskEdit = () => {
         setIsBeingEdited(true)
