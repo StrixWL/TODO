@@ -1,10 +1,10 @@
 .edit-button {
-    background-color: transparent;
-    border: none;
+	background-color: transparent;
+	border: none;
 }
 
 .edit-button:hover {
-    cursor: pointer;
-    background-color: #EEEFF0;
-    border-radius: 8px;
+	cursor: pointer;
+	background-color: #eeeff0;
+	border-radius: 8px;
 }

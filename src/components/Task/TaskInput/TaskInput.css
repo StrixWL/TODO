@@ -1,15 +1,15 @@
 .tasks__task-input {
-    font-family: 'Product Sans Light Regular';
-    height: 100%;
-    line-height: 31px;
-    position: absolute;
-    left: 63px;
-    height: 30px;
-    font-size: 18px;
-    border: none;
-    width: 55%;
+	font-family: "Product Sans Light Regular";
+	height: 100%;
+	line-height: 31px;
+	position: absolute;
+	left: 63px;
+	height: 30px;
+	font-size: 18px;
+	border: none;
+	width: 55%;
 }
 
 .tasks__task:nth-child(even) > .tasks__task-input {
-    top: -1px;
+	top: -1px;
 }
